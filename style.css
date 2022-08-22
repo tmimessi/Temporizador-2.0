@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  --bg-color: #ffffff;
+  --text-color: #323238;
+  --bg-card: #e1e1e6;
+  --bg-card-click: #02799d;
+  --icon-color-click-light: #ffffff;
+  /* variáveis do tema claro */
+  display: grid;
+  min-height: 60vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+}
+
+.dark {
+  font-size: 62.5%;
+  /* variáveis do tema escuro */
+  --bg-color: #121214;
+  --text-color: #c4c4cc;
+  --bg-card: #29292e;
+  --bg-card-click: #0a3442;
+}
+
+main {
+  align-self: end;
+  justify-self: center;
+  display: flex;
+}
+
+header {
+  padding-right: 6rem;
+  padding-top: 6rem;
+  justify-self: right;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.play svg path,
+.stop svg path,
+.add svg path,
+.less svg path {
+  fill: var(--text-color);
+}
+
+button svg {
+  width: clamp(2.4rem, 2rem + 12vw, 6.4rem);
+}
+
+#timer {
+  font-size: clamp(5rem, 5rem + 10vw, 10rem);
+  margin-bottom: 2rem;
+  display: flex;
+  color: var(--text-color);
+}
+
+#left {
+  margin-left: clamp(2rem, 2rem + 10vw, 10rem);
+  margin-top: 2rem;
+}
+
+#right {
+  display: flex;
+  margin-left: clamp(1rem, 5rem + 10vw, 20rem);
+}
+
+#right svg {
+  width: 3rem;
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+.card-1 {
+  display: grid;
+  width: 9rem;
+  height: 10rem;
+  background-color: var(--bg-card);
+  border-radius: 24px;
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+}
+
+.card-2 {
+  display: grid;
+  width: 9rem;
+  height: 10rem;
+  background-color: var(--bg-card);
+  border-radius: 24px;
+}
+
+.card-3 {
+  display: grid;
+  width: 9rem;
+  height: 10rem;
+  background-color: var(--bg-card);
+  border-radius: 24px;
+  margin-bottom: 3rem;
+}
+
+.card-4 {
+  display: grid;
+  width: 9rem;
+  height: 10rem;
+  background-color: var(--bg-card);
+  border-radius: 24px;
+}
+
+.card-1 svg path,
+.card-2 svg path,
+.card-3 svg path,
+.card-4 svg path {
+  fill: var(--text-color);
+}
+
+#right button.active {
+  background-color: var(--bg-card-click);
+}
+
+#right button.active svg path {
+  fill: var(--icon-color-click-light);
+}
+
+#right button.active .volume {
+  background-color: var(--icon-color-click-light);
+}
+
+#right button.active .volume::-webkit-slider-thumb {
+  background-color: var(--icon-color-click-light);
+}
+
+.hide {
+  display: none;
+}
+
+.volume {
+  appearance: none;
+  width: 7rem;
+  height: 0.3rem;
+  margin-left: 1rem;
+  background-color: var(--text-color);
+}
+
+.volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--text-color);
+  cursor: pointer;
+}
